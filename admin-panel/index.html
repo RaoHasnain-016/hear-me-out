@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Firebase Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Firebase compat CDN -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="logo">Admin Panel</h1>
+      <div id="auth-area">
+        <button id="sign-in-btn" class="btn">Sign in (Google)</button>
+        <button id="sign-out-btn" class="btn hidden">Sign out</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="cards">
+        <div class="card">
+          <h3>Total Users</h3>
+          <p id="total-users">—</p>
+        </div>
+        <div class="card">
+          <h3>Admins</h3>
+          <p id="total-admins">—</p>
+        </div>
+      </section>
+
+      <section class="controls">
+        <button id="add-user-open" class="btn accent hidden">Add user</button>
+        <input id="search" placeholder="Search by name, email or role">
+        <select id="sort">
+          <option value="createdAt_desc">Newest</option>
+          <option value="createdAt_asc">Oldest</option>
+          <option value="name_asc">Name A→Z</option>
+          <option value="name_desc">Name Z→A</option>
+          <option value="role_asc">Role A→Z</option>
+        </select>
+      </section>
+
+      <section id="dashboard" class="dashboard" style="display:flex; gap:20px; justify-content:space-around; align-items:flex-start;">
+  <!-- <canvas id="rolesChart" style="width:300px; height:300px;"></canvas> -->
+  <!-- <canvas id="growthChart" style="width:400px; height:300px;"></canvas> -->
+</section>
+
+
+      <section id="users-list" class="users"></section>
+
+      <div class="pagination">
+        <button id="prev-page" class="btn">Prev</button>
+        <span id="page-info">Page 1</span>
+        <button id="next-page" class="btn">Next</button>
+      </div>
+    </main>
+
+    <!-- MODAL (Add User Only) -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-card">
+        <button id="modal-close" class="close">&times;</button>
+        <h2 id="modal-title">Add user</h2>
+        <form id="user-form">
+          <label>Name
+            <input id="name" required>
+          </label>
+          <label>Email
+            <input id="email" type="email" required>
+          </label>
+          <label>Password
+            <input id="password" type="password" required>
+          </label>
+          <label>Role
+            <select id="role">
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+              <option value="superadmin">Super Admin</option>
+            </select>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn accent">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <small>Admin panel — connected to Firebase</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

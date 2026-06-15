@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "943010250252",
+    "project_id": "hearmeoutfyp-8e14d",
+    "storage_bucket": "hearmeoutfyp-8e14d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943010250252:android:65f4e239b68a01ed087829",
+        "android_client_info": {
+          "package_name": "com.example.hearmeout"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZvTYkbymj3zpRkPhJJsACOaC3qrl5asw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

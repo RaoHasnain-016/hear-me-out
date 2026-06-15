@@ -1,0 +1,35 @@
+# OS and IDE files
+.DS_Store
+.idea/
+*.iml
+
+# Secrets and local configuration
+.env
+.env.*
+admin-panel/serviceAccountKey.json
+**/local.properties
+*.jks
+*.keystore
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/venv/
+
+# Node.js
+**/node_modules/
+**/npm-debug.log*
+
+# Flutter/Dart and Android build state
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.pub-cache/
+**/.pub/
+**/build/
+**/.gradle/
+
+# Logs and generated output
+**/*.log
+**/replay_pid*

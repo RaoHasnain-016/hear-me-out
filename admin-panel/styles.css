@@ -1,0 +1,54 @@
+/* (Use your existing styles; this adds a few classes used below) */
+*{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+:root{--bg:#0f172a;--card:#0b1220;--accent:#7c3aed;--muted:#94a3b8;--glass:rgba(255,255,255,0.03);}
+body{margin:0;background:linear-gradient(180deg,#071029 0%,#071833 60%);color:#e6eef8;padding:24px;}
+.container{max-width:1100px;margin:0 auto}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.logo{font-size:1.4rem;background:linear-gradient(90deg,var(--accent),#4f46e5);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:inherit;cursor:pointer;transition:transform .12s}
+.btn:hover{transform:translateY(-3px)}
+.cards{display:flex;gap:12px;margin-bottom:18px}
+.card{flex:1;padding:16px;border-radius:12px;background:rgba(255,255,255,0.02)}
+.controls{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.controls input{flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.users{display:flex;flex-direction:column;gap:8px}
+.user-row{display:grid;grid-template-columns:2fr 2fr 1fr 2fr 160px;gap:10px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);align-items:center}
+.user-row h4{margin:0}
+.badge{padding:6px 8px;border-radius:8px;font-size:.8rem}
+.badge.admin{background:rgba(124,58,237,0.14)}
+.badge.user{background:rgba(255,255,255,0.02)}
+.badge.superadmin{background:rgba(255,215,0,0.08);color:#ffd700}
+.pagination{display:flex;gap:10px;align-items:center;justify-content:center;margin:14px 0}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.65);z-index:40}
+.modal-card{width:560px;padding:18px;background:linear-gradient(180deg,#071029,#071833);border-radius:12px}
+.close{position:absolute;right:12px;top:12px;border:none;background:transparent;color:#9aa8c4;font-size:22px}
+.form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.dashboard {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.dashboard .chart {
+  flex: 1 1 300px; /* grow, shrink, minimum width 300px */
+  max-width: 45%;  /* max width for side by side on large screens */
+  height: 300px;   /* fixed height to match */
+}
+  
+/* Optional: for very small screens */
+@media (max-width: 600px) {
+  .dashboard .chart {
+    max-width: 100%;
+  }
+}
+canvas{background:rgba(255,255,255,0.02);border-radius:8px;padding:8px}
+.hidden{display:none}
+#rolesChart {
+  max-width: 250px;
+  max-height: 250px;
+  margin: 20px auto;
+  display: block;
+}
+
